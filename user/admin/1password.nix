@@ -1,8 +1,4 @@
-{
-  pkgs,
-  lib,
-  ...
-}: let
+{...}: let
   onePassPath = "~/.1password/agent.sock";
 in {
   programs.ssh = {

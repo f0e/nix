@@ -1,9 +1,4 @@
-{
-  config,
-  pkgs,
-  lib,
-  ...
-}: {
+{lib, ...}: {
   wayland.windowManager.hyprland.settings = {
     # Default applications
     "$terminal" = lib.mkDefault "ghostty";

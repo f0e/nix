@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+{...}: {
   wayland.windowManager.hyprland.settings = {
     bind = [
       "SUPER, space, exec, wofi --show drun --sort-order=alphabetical"

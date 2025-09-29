@@ -1,9 +1,7 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+{...}: {
   services.hyprpaper = {
     enable = true;
   };
+
+  # todo: stuff
 }

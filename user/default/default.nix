@@ -59,11 +59,10 @@
     ./hyprland
     ./waybar
     ./fonts.nix
-    ./ghostty.nix
-    ./git.nix
     ./hypridle.nix
     ./hyprlock.nix
     ./hyprpaper.nix
+    ./packages.nix
     ./vscode.nix
   ];
 
