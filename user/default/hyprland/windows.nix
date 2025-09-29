@@ -33,6 +33,7 @@
       "stayfocused, class:(clipse)"
 
       # make games immediate (enable tearing, improve latency)
+      # https://wiki.hypr.land/Configuring/Tearing/
       # todo: can this be automatic for all games without having to put them in here manually
       "immediate, class:^(tf_linux64)$"
       "opacity 1 0.7, class:^(tf_linux64)$"
