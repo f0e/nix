@@ -1,9 +1,14 @@
-{ inputs, lib, config, pkgs, ... }:
-{ 
+{
+  inputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}: {
   programs.waybar = {
     enable = true;
     settings = {
-      mainBar = builtins.fromJSON (builtins.readFile ./src/config.jsonc);
+      mainBar = builtins.fromJSON (builtins.readFile ./src/config.jsonc); # TODO: symlink like css so i can edit quickly
     };
   };
 

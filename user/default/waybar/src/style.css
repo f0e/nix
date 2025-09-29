@@ -24,8 +24,8 @@ window#waybar {
 .modules-center,
 .modules-right {
     padding: 1px;
-    margin: 10px 10px 0 10px;
-    border-radius: 10px;
+    margin: 10 10 0 10;
+    border-radius: 10;
 }
 
 .modules-left {
@@ -57,11 +57,11 @@ window#waybar {
 tooltip {
     background: @surface_container_lowest;
     color: @on_surface;
-    border-radius: 10px;
+    border-radius: 10;
 }
 
 #clock {
-    padding: 3px 10px;
+    padding: 3px 10;
     font-weight: 800;
     border-radius: 8px;
     color: @on_primary;
@@ -69,7 +69,7 @@ tooltip {
 }
 
 #mpris {
-    padding: 3px 10px;
+    padding: 3px 10;
     font-weight: 800;
     color: @on_surface;
     margin-left: 5px;
@@ -77,7 +77,7 @@ tooltip {
 
 #workspaces button {
     all: unset;
-    padding: 0px 9px;
+    padding: 0 9px;
     color: @on_surface;
     border-radius: 8px;
     font-weight: 800;
@@ -95,13 +95,13 @@ tooltip {
 }
 
 #workspaces button.active {
-    padding: 0px 14px;
+    padding: 0 14px;
     background: @primary;
     color: @on_primary;
 }
 
 #language {
-    padding: 0px 5px;
+    padding: 0 5px;
     margin: 0 5px;
 }
 
@@ -114,19 +114,19 @@ tooltip {
 }
 
 #network {
-    padding: 0px 5px 0px 3px;
+    padding: 0 5px 0 3px;
     transition: all .3s ease;
     color: @on_surface;
     background: alpha(@primary, 0.1);
 }
 
 #group-expand {
-    padding: 0px 5px;
+    padding: 0 5px;
     transition: all .3s ease;
 }
 
 #custom-expand {
-    padding: 0px 5px;
+    padding: 0 5px;
     color: alpha(@on_surface, 0.5);
     transition: all .3s ease;
 }
@@ -139,7 +139,7 @@ tooltip {
 #memory,
 #temperature {
     background: alpha(@primary, 0.1);
-    padding: 0px 5px;
+    padding: 0 5px;
     transition: all .3s ease;
     color: @on_surface;
 }
@@ -157,24 +157,29 @@ tooltip {
 }
 
 #tray {
-    padding: 0px 5px;
+    padding: 0 5px;
     transition: all .3s ease;
 }
 
 #tray menu * {
-    padding: 0px 5px;
+    padding: 0 5px;
     transition: all .3s ease;
 }
 
 #tray menu separator {
-    padding: 0px 5px;
+    padding: 0 5px;
     transition: all .3s ease;
 }
 
 #custom-power {
-    padding: 3px 13px 3px 10px;
+    padding: 3px 13px 3px 10;
     background: @primary;
     color: @on_primary;
     border-radius: 8px;
-    margin-left: 6px;
+    margin-left: 2px;
+}
+
+#wireplumber {
+    padding: 0 5px;
+    margin: 0 2px;
 }
