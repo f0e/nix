@@ -39,6 +39,8 @@
     gparted
   ];
 
+  programs.zsh.enable = true;
+
   programs.hyprland = {
     enable = true;
     # set the flake package
