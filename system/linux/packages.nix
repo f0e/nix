@@ -34,6 +34,7 @@
     libgcc
     wl-clipboard
     seahorse
+    feh
   ];
 
   programs.hyprland = {
