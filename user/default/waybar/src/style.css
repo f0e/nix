@@ -1,0 +1,180 @@
+@define-color primary #A8CF93;
+@define-color on_primary #000;
+@define-color surface #121212;
+@define-color surface_container_high #1f1f1f;
+@define-color surface_container_lowest #272727;
+@define-color on_surface #ffffff;
+
+/* Transparent versions */
+@define-color alpha_08 rgba(255, 255, 255, 0.08);
+@define-color alpha_10 rgba(255, 255, 255, 0.1);
+@define-color alpha_30 rgba(255, 255, 255, 0.3);
+@define-color alpha_50 rgba(255, 255, 255, 0.5);
+
+* {
+    font-size: 13px;
+    font-family: "JetBrains Mono Nerd Font";
+}
+
+window#waybar {
+    all: unset;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    padding: 1px;
+    margin: 10px 10px 0 10px;
+    border-radius: 10px;
+}
+
+.modules-left {
+    background: linear-gradient(to top left,
+            @surface_container_high 40%,
+            @primary 100%);
+}
+
+.modules-right {
+    background: linear-gradient(to top right,
+            @surface_container_high 40%,
+            @primary 100%);
+}
+
+.modules-center {
+    background: linear-gradient(to top,
+            @surface_container_high 70%,
+            @primary 100%);
+}
+
+#left,
+#center,
+#right {
+    padding: 4px;
+    border-radius: 9px;
+    background: @surface;
+}
+
+tooltip {
+    background: @surface_container_lowest;
+    color: @on_surface;
+    border-radius: 10px;
+}
+
+#clock {
+    padding: 3px 10px;
+    font-weight: 800;
+    border-radius: 8px;
+    color: @on_primary;
+    background: @primary;
+}
+
+#mpris {
+    padding: 3px 10px;
+    font-weight: 800;
+    color: @on_surface;
+    margin-left: 5px;
+}
+
+#workspaces button {
+    all: unset;
+    padding: 0px 9px;
+    color: @on_surface;
+    border-radius: 8px;
+    font-weight: 800;
+    transition: all .2s ease;
+    margin: 0 2px;
+}
+
+#workspaces button.empty {
+    color: alpha(@on_surface, 0.3);
+}
+
+#workspaces button:not(.empty) {
+    background: alpha(@primary, 0.13);
+    color: @on_surface;
+}
+
+#workspaces button.active {
+    padding: 0px 14px;
+    background: @primary;
+    color: @on_primary;
+}
+
+#language {
+    padding: 0px 5px;
+    margin: 0 5px;
+}
+
+#bluetooth {
+    padding: 0 5px;
+    transition: all .3s ease;
+    color: @on_surface;
+    background: alpha(@primary, 0.1);
+    border-radius: 8px 0 0 8px;
+}
+
+#network {
+    padding: 0px 5px 0px 3px;
+    transition: all .3s ease;
+    color: @on_surface;
+    background: alpha(@primary, 0.1);
+}
+
+#group-expand {
+    padding: 0px 5px;
+    transition: all .3s ease;
+}
+
+#custom-expand {
+    padding: 0px 5px;
+    color: alpha(@on_surface, 0.5);
+    transition: all .3s ease;
+}
+
+#custom-expand:hover {
+    color: @on_surface;
+}
+
+#cpu,
+#memory,
+#temperature {
+    background: alpha(@primary, 0.1);
+    padding: 0px 5px;
+    transition: all .3s ease;
+    color: @on_surface;
+}
+
+#cpu {
+    border-radius: 8px 0 0 8px;
+}
+
+#memory {
+    padding: 0 8px 0 5px;
+}
+
+#temperature {
+    border-radius: 0 8px 8px 0;
+}
+
+#tray {
+    padding: 0px 5px;
+    transition: all .3s ease;
+}
+
+#tray menu * {
+    padding: 0px 5px;
+    transition: all .3s ease;
+}
+
+#tray menu separator {
+    padding: 0px 5px;
+    transition: all .3s ease;
+}
+
+#custom-power {
+    padding: 3px 13px 3px 10px;
+    background: @primary;
+    color: @on_primary;
+    border-radius: 8px;
+    margin-left: 6px;
+}
