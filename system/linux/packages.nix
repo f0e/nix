@@ -36,6 +36,7 @@
     seahorse
     feh
     hyprpolkitagent
+    gparted
   ];
 
   programs.hyprland = {
