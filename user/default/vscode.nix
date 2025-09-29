@@ -20,7 +20,7 @@
         ];
 
       userSettings = {
-        editor.fontFamily = "\"JetBrainsMono NF\", monospace";
+        editor.fontFamily = "\"CaskaydiaMono NF\", monospace";
         editor.formatOnSave = true;
         workbench.colorTheme = "Darker Modern";
         nix.serverPath = "nixd";

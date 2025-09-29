@@ -25,7 +25,7 @@
 
         outline_thickness = 4;
 
-        font_family = "JetBrains Mono Nerd Font";
+        font_family = "Caskaydia Mono Nerd Font";
         font_size = 12;
 
         placeholder_text = "password";

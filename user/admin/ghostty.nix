@@ -15,7 +15,7 @@
 
       window-padding-color = "background";
 
-      font-family = "JetBrainsMono NF"; # todo: this should be global or smth
+      font-family = "CaskaydiaMono NF"; # todo: this should be global or smth
       font-size = 11;
       font-thicken = true;
       font-thicken-strength = 64;
