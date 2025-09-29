@@ -33,6 +33,7 @@
             };
           };
         };
+        chat.disableAIFeatures = true;
       };
 
       keybindings = [
