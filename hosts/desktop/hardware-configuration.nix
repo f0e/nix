@@ -22,15 +22,16 @@
     fsType = "ext4";
   };
 
+  # https://wiki.nixos.org/wiki/Dual_Booting_NixOS_and_Windows
   fileSystems."/efi" = {
-    device = "/dev/disk/by-uuid/8838-606F"; # windows efi
+    device = "/dev/disk/by-uuid/8838-606F"; # nix-windows shared efi
     fsType = "vfat";
   };
 
+  # for whatever other shit nix needs to store. windows efi doesnt need it.
   fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/CF3C-77D2";
+    device = "/dev/disk/by-uuid/3555-7663";
     fsType = "vfat";
-    options = ["fmask=0077" "dmask=0077"];
   };
 
   swapDevices = [
