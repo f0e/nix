@@ -29,8 +29,6 @@
     eza
     fd
     curl
-    gnumake
-    libgcc
     wl-clip-persist
     wl-clipboard
     seahorse

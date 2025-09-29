@@ -1,14 +1,9 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
     ffmpeg-full
-    mise
     vesktop
     spotify
     vscode
-    vapoursynth
-    vapoursynth-mvtools
-    vapoursynth-bestsource
-    clang-tools
     btop
     helvum
 
