@@ -4,7 +4,7 @@
     ./ghostty.nix
     ./packages.nix
     ./hyprpaper.nix
-    ./zsh.nix
+    ./shell.nix
   ];
 
   home.username = "admin";
