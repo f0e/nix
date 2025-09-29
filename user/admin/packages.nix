@@ -38,8 +38,4 @@
 
     profiles."default".isDefault = true;
   };
-
-  programs.git = {
-    enable = true;
-  };
 }
