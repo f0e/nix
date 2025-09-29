@@ -149,8 +149,10 @@
     libvdpau-va-gl
   ];
 
-  # enable ntfs support
-  boot.supportedFilesystems = ["ntfs"];
+  boot.supportedFilesystems = [
+    "ntfs"
+    "fuse.sshfs"
+  ];
 
   # mount storage partition
   fileSystems."/mnt/storage" = {
@@ -164,6 +166,18 @@
     device = "/dev/disk/by-uuid/20A60232A60208CC";
     fsType = "ntfs-3g";
     options = ["r" "uid=1000" "gid=100" "umask=0022"];
+  };
+
+  fileSystems."/mnt/nas/documents" = {
+    device = "root@192.168.4.67:/mnt/user/documents";
+    fsType = "fuse.sshfs";
+    options = [
+      "allow_other" # for non-root access
+      "_netdev" # this is a network fs
+      "x-systemd.automount" # mount on demand
+
+      "IdentityFile=/root/.ssh/id_ed25519"
+    ];
   };
 
   services.tailscale.enable = true;
