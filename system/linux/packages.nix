@@ -3,7 +3,6 @@
   inputs,
   ...
 }: {
-  # System packages optimized for your setup
   environment.systemPackages = with pkgs; [
     vim
     wget
@@ -32,9 +31,11 @@
     curl
     gnumake
     libgcc
+    wl-clip-persist
     wl-clipboard
     seahorse
     feh
+    hyprpolkitagent
   ];
 
   programs.hyprland = {

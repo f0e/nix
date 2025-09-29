@@ -138,22 +138,8 @@ tooltip {
 #cpu,
 #memory,
 #temperature {
-    background: alpha(@primary, 0.1);
     padding: 0 5px;
     transition: all .3s ease;
-    color: @on_surface;
-}
-
-#cpu {
-    border-radius: 8px 0 0 8px;
-}
-
-#memory {
-    padding: 0 8px 0 5px;
-}
-
-#temperature {
-    border-radius: 0 8px 8px 0;
 }
 
 #tray {

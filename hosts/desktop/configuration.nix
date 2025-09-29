@@ -4,6 +4,13 @@
   inputs,
   ...
 }: {
+  # needed so nixos time is compatible with Windows time
+  time.hardwareClockInLocalTime = true;
+  environment.shellAliases = {
+    "@win" = "bootctl set-oneshot auto-windows; echo 'on next reboot only: Windows will boot by default'";
+    "@win-now" = "systemctl reboot --boot-loader-entry=auto-windows; echo 'now rebooting into windows'";
+  };
+
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
@@ -13,6 +20,9 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+
+  boot.loader.efi.efiSysMountPoint = "/efi";
+  boot.loader.systemd-boot.xbootldrMountPoint = "/boot";
 
   # Use latest kernel for best hardware support
   boot.kernelPackages = pkgs.linuxPackages_latest;

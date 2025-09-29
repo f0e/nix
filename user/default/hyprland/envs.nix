@@ -23,17 +23,17 @@ in {
         "XCURSOR_THEME,NotwaitaBlack"
         "HYPRCURSOR_THEME,NotwaitaBlack"
 
-        # Force all apps to use Wayland
-        "GDK_BACKEND,wayland"
-        "QT_QPA_PLATFORM,wayland"
-        "QT_STYLE_OVERRIDE,kvantum"
-        "SDL_VIDEODRIVER,wayland"
-        "MOZ_ENABLE_WAYLAND,1"
-        "ELECTRON_OZONE_PLATFORM_HINT,wayland"
-        "OZONE_PLATFORM,wayland"
+        # # Force all apps to use Wayland
+        # "GDK_BACKEND,wayland"
+        # "QT_QPA_PLATFORM,wayland"
+        # "QT_STYLE_OVERRIDE,kvantum"
+        # "SDL_VIDEODRIVER,wayland"
+        # "MOZ_ENABLE_WAYLAND,1"
+        # "ELECTRON_OZONE_PLATFORM_HINT,wayland"
+        # "OZONE_PLATFORM,wayland"
 
-        # Make Chromium use XCompose and all Wayland
-        "CHROMIUM_FLAGS,\"--enable-features=UseOzonePlatform --ozone-platform=wayland --gtk-version=4\""
+        # # Make Chromium use XCompose and all Wayland
+        # "CHROMIUM_FLAGS,\"--enable-features=UseOzonePlatform --ozone-platform=wayland --gtk-version=4\""
 
         # Make .desktop files available for wofi
         "XDG_DATA_DIRS,$XDG_DATA_DIRS:$HOME/.nix-profile/share:/nix/var/nix/profiles/default/share"
