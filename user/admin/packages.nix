@@ -15,9 +15,7 @@
 
   programs.neovim.enable = true;
 
-  programs.obs-studio = {
-    enable = true;
-  };
+  programs.obs-studio.enable = true;
 
   programs.chromium = {
     enable = true;
