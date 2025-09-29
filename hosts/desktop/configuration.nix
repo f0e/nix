@@ -81,8 +81,6 @@
     jack.enable = true; # Enabled for better audio production support
   };
 
-  programs.zsh.enable = true;
-
   users.users.admin = {
     isNormalUser = true;
     description = "admin";
