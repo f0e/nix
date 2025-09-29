@@ -9,6 +9,7 @@
           jnoortheen.nix-ide
           charliermarsh.ruff
           biomejs.biome
+          esbenp.prettier-vscode
         ]
         ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
           {
