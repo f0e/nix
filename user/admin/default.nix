@@ -6,6 +6,7 @@
     ./packages.nix
     ./hyprpaper.nix
     ./shell.nix
+    ./systemd.nix
   ];
 
   home.username = "admin";
