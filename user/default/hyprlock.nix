@@ -29,8 +29,8 @@
         font_size = 12;
 
         placeholder_text = "password";
-        check_color = "rgba(131, 192, 146, 1.0)";
-        fail_text = "Wrong";
+        check_color = "rgba(128, 128, 128, 1.0)";
+        fail_text = "incorrect";
 
         rounding = 10;
         shadow_passes = 0;
