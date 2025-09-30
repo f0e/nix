@@ -21,11 +21,6 @@
     pavucontrol
     blueberry
     clipse
-    fzf
-    zoxide
-    ripgrep
-    eza
-    fd
     curl
     wl-clip-persist
     wl-clipboard
