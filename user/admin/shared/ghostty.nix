@@ -1,12 +1,9 @@
-{
-  pkgs,
-  inputs,
-  config,
-  ...
-}: {
+{...}: {
   programs.ghostty = {
+    enable = true;
+
     settings = {
-      auto-update = "off";
+      auto-update = "off"; # nix handles it
 
       theme = "iTerm2 Pastel Dark Background";
 
@@ -15,7 +12,6 @@
 
       window-padding-color = "background";
 
-      font-family = "CaskaydiaMono NF"; # todo: this should be global or smth
       font-size = 11;
       font-thicken = true;
       font-thicken-strength = 64;

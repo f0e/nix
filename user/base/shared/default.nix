@@ -1,8 +1,7 @@
 {...}: {
   imports = [
-    ../shared
-
     ./fonts.nix
     ./packages.nix
+    ./vscode.nix
   ];
 }

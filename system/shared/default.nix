@@ -1,8 +1,6 @@
 {...}: {
   imports = [
-    ../shared
-
-    ./fonts.nix
     ./packages.nix
+    ./services.nix
   ];
 }

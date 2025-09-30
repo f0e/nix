@@ -4,11 +4,9 @@
     ./direnv.nix
     ./ghostty.nix
     ./packages.nix
-    ./hyprpaper.nix
     ./shell.nix
-    ./systemd.nix
+    ./spicetify.nix
   ];
 
   home.username = "admin";
-  home.homeDirectory = "/home/admin";
 }

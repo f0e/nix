@@ -21,11 +21,16 @@
         ];
 
       userSettings = {
-        editor.fontFamily = "\"CaskaydiaMono NF\", monospace";
         editor.formatOnSave = true;
+
         workbench.colorTheme = "Darker Modern";
+
         nix.serverPath = "nixd";
         nix.enableLanguageServer = true;
+        nix.hiddenLanguageServerErrors = [
+          "textDocument/definition"
+          "textDocument/formatting"
+        ];
         nix.serverSettings = {
           nixd = {
             formatting = {
@@ -33,7 +38,10 @@
             };
           };
         };
+
         chat.disableAIFeatures = true;
+
+        biome.suggestInstallingGlobally = false; # annoying
       };
 
       keybindings = [

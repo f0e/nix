@@ -19,8 +19,6 @@
     playerctl
     gnome-themes-extra
     pavucontrol
-    alejandra
-    nixd
     blueberry
     clipse
     fzf
@@ -45,16 +43,16 @@
     portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
   };
 
+  services.gnome.gnome-keyring.enable = true;
+
+  programs.thunar.enable = true;
+
   programs.steam.enable = true;
 
   # 1password
   programs._1password.enable = true;
   programs._1password-gui = {
     enable = true;
-    polkitPolicyOwners = ["admin"];
+    _1password-gui.polkitPolicyOwners = ["admin"]; # todo: not hardcode
   };
-
-  services.gnome.gnome-keyring.enable = true;
-
-  programs.thunar.enable = true;
 }

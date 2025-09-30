@@ -4,18 +4,18 @@
   inputs,
   ...
 }: {
+  imports = [
+    ../../system/linux
+    ./hardware-configuration.nix
+    inputs.home-manager.nixosModules.default
+  ];
+
   # needed so nixos time is compatible with Windows time
   time.hardwareClockInLocalTime = true;
   environment.shellAliases = {
     "@win" = "bootctl set-oneshot auto-windows; echo 'on next reboot only: Windows will boot by default'";
     "@win-now" = "systemctl reboot --boot-loader-entry=auto-windows; echo 'now rebooting into windows'";
   };
-
-  imports = [
-    # Include the results of the hardware scan.
-    ./hardware-configuration.nix
-    inputs.home-manager.nixosModules.default
-  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -90,6 +90,8 @@
     ];
     shell = pkgs.zsh;
   };
+
+  system.primaryUser = "admin";
 
   home-manager = {
     extraSpecialArgs = {inherit inputs;};
@@ -188,6 +190,4 @@
       "IdentityFile=/root/.ssh/id_ed25519"
     ];
   };
-
-  services.tailscale.enable = true;
 }

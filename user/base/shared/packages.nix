@@ -1,5 +1,9 @@
-{...}: {
-  programs.ghostty.enable = true;
+{inputs, ...}: {
+  # programs.ghostty = {
+  #   enable = true;
+
+  #   package = inputs.ghostty.ghostty-bin;
+  # };
 
   programs.git.enable = true;
 

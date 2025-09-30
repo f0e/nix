@@ -1,0 +1,107 @@
+{
+  pkgs,
+  lib,
+  config,
+  inputs,
+  ...
+}: let
+  taps = {
+    "homebrew/homebrew-core" = inputs.homebrew-core;
+    "homebrew/homebrew-cask" = inputs.homebrew-cask;
+  };
+in {
+  imports = [
+    ../../system/macos
+    inputs.nix-homebrew.darwinModules.nix-homebrew
+    inputs.home-manager.darwinModules.home-manager
+    inputs.mac-app-util.darwinModules.default
+  ];
+
+  nix-homebrew = {
+    enable = true;
+
+    # Apple Silicon Only: Also install Homebrew under the default Intel prefix for Rosetta 2
+    enableRosetta = true;
+
+    # User owning the Homebrew prefix
+    user = "admin";
+
+    inherit taps;
+
+    mutableTaps = false;
+  };
+
+  homebrew = {
+    enable = true;
+    global.autoUpdate = false;
+
+    # The `cleanup = "zap"` field causes brew to try untapping taps that don't appear in the brewfile bundle,
+    # so we repeat them here just to get them in the brewfile.
+    # See also: https://github.com/zhaofengli/nix-homebrew/issues/5
+    taps = lib.attrNames taps;
+    onActivation.cleanup = "zap";
+  };
+
+  home-manager = {
+    extraSpecialArgs = {
+      inherit inputs;
+      pkgs-unstable = import inputs.nixpkgs {
+        inherit (pkgs) system config overlays;
+      };
+    };
+
+    sharedModules = [
+      inputs.mac-app-util.homeManagerModules.default
+    ];
+
+    users = {
+      "admin" = import ./users/admin.nix;
+    };
+  };
+
+  home-manager.useGlobalPkgs = true;
+  home-manager.useUserPackages = true;
+
+  # # https://github.com/nix-community/home-manager/issues/1341#issuecomment-3256894180
+  # home-manager.sharedModules = [
+  #   inputs.nixcord.homeModules.nixcord
+  #   (
+  #     {...}: {
+  #       targets.darwin.linkApps.enable = false;
+  #     }
+  #   )
+  # ];
+  # system.build.applications = lib.mkForce (
+  #   pkgs.buildEnv {
+  #     name = "system-applications";
+  #     pathsToLink = "/Applications";
+  #     paths =
+  #       config.environment.systemPackages
+  #       ++ (lib.concatMap (x: x.home.packages) (lib.attrsets.attrValues config.home-manager.users));
+  #   }
+  # );
+
+  nixpkgs.config.allowUnfree = true;
+
+  # Necessary for using flakes on this system.
+  nix.settings.experimental-features = "nix-command flakes";
+
+  # # Set Git commit hash for darwin-version.
+  # system.configurationRevision = self.rev or self.dirtyRev or null;
+
+  # Used for backwards compatibility, please read the changelog before changing.
+  # $ darwin-rebuild changelog
+  system.stateVersion = 6;
+
+  # The platform the configuration will be used on.
+  nixpkgs.hostPlatform = "aarch64-darwin";
+
+  users.users = {
+    admin = {
+      name = "admin";
+      home = "/Users/admin";
+    };
+  };
+
+  system.primaryUser = "admin";
+}

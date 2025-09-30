@@ -2,7 +2,7 @@
   programs.fish.enable = true;
 
   programs.zsh = {
-    initExtra = ''
+    initContent = ''
       if [[ $(ps -o command= -p "$PPID" | awk '{print $1}') != 'fish' ]]
       then
           exec fish -l
