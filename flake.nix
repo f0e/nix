@@ -58,6 +58,7 @@
 
     darwinConfigurations = {
       macbook-13 = nix-darwin.lib.darwinSystem {
+        system = "aarch64-darwin";
         specialArgs = {inherit inputs;};
         modules = [
           ./hosts/macbook-13/configuration.nix
