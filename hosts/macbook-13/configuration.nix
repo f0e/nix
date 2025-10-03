@@ -14,7 +14,6 @@ in {
     ../../system/macos
     inputs.nix-homebrew.darwinModules.nix-homebrew
     inputs.home-manager.darwinModules.home-manager
-    inputs.mac-app-util.darwinModules.default
   ];
 
   nix-homebrew = {
@@ -47,14 +46,27 @@ in {
       inherit inputs;
     };
 
-    sharedModules = [
-      inputs.mac-app-util.homeManagerModules.default
-    ];
-
     users = {
       "admin" = import ./users/admin.nix;
     };
   };
+
+  # TODO: remove once https://github.com/nix-community/home-manager/pull/7915 is merged
+  home-manager.sharedModules = [
+    {
+      targets.darwin.linkApps.enable = lib.mkDefault false;
+    }
+  ];
+
+  system.build.applications = lib.mkForce (
+    pkgs.buildEnv {
+      name = "system-applications";
+      pathsToLink = "/Applications";
+      paths =
+        config.environment.systemPackages
+        ++ (lib.concatMap (x: x.home.packages) (lib.attrsets.attrValues config.home-manager.users));
+    }
+  );
 
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
