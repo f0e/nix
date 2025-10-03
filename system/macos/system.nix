@@ -34,6 +34,9 @@
         FXEnableExtensionChangeWarning = false;
         QuitMenuItem = true;
       };
+      controlcenter = {
+        BatteryShowPercentage = true;
+      };
     };
   };
 }
