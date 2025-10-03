@@ -37,6 +37,22 @@
       controlcenter = {
         BatteryShowPercentage = true;
       };
+      CustomSystemPreferences = {
+        # NSGlobalDomain = {
+        #   AppleAccentColor = 6;
+        # };
+        "com.apple.desktopservices" = {
+          # dont create .DS_Store files on USB or network volumes
+          DSDontWriteUSBStores = true;
+          DSDontWriteNetworkStores = true;
+        };
+        "com.apple.AdLib" = {
+          # disable personalized advertising
+          forceLimitAdTracking = true;
+          allowApplePersonalizedAdvertising = false;
+          allowIdentifierForAdvertising = false;
+        };
+      };
     };
   };
 }
