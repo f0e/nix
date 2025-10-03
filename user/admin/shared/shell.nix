@@ -86,4 +86,6 @@ in {
   xdg.configFile = {
     "starship.toml".source = config.lib.file.mkOutOfStoreSymlink "${dotfiles}/starship.toml";
   };
+
+  home.file.".hushlogin".text = "";
 }
