@@ -9,6 +9,10 @@ in {
     fish = {
       enable = true;
 
+      shellInit = ''
+        set fish_greeting ""
+      '';
+
       interactiveShellInit = ''
         # enable uv completions if using
         if type -q uv
