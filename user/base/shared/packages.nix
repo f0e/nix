@@ -1,10 +1,4 @@
 {inputs, ...}: {
-  # programs.ghostty = {
-  #   enable = true;
-
-  #   package = inputs.ghostty.ghostty-bin;
-  # };
-
   programs.git.enable = true;
 
   programs.fastfetch.enable = true;
