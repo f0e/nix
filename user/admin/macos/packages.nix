@@ -4,5 +4,6 @@
     ice-bar
     shottr
     raycast
+    iina
   ];
 }
