@@ -44,6 +44,10 @@ in {
 
     bat = {
       enable = true;
+
+      config = {
+        style = "plain";
+      };
     };
 
     eza = {
