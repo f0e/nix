@@ -7,6 +7,8 @@
       # todo: revisit
       "1password"
       "brave-browser"
+
+      "battery"
     ];
 
     masApps = {

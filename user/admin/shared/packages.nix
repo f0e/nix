@@ -22,6 +22,8 @@
     csvlens
     vivid
     pastel
+
+    yt-dlp
   ];
 
   programs.neovim.enable = true;
