@@ -55,4 +55,10 @@
       };
     };
   };
+
+  system.activationScripts.setting.text = ''
+    # change default apps
+    duti -s com.colliderli.iina .mp4 all
+    duti -s com.colliderli.iina .mkv all
+  '';
 }
