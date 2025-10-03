@@ -1,6 +1,6 @@
-{pkgs-unstable, ...}: {
+{pkgs, ...}: {
   programs.ghostty = {
-    package = pkgs-unstable.ghostty-bin;
+    package = pkgs.ghostty-bin;
 
     settings = {
       # macos-titlebar-style = "tabs"

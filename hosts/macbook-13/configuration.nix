@@ -45,9 +45,6 @@ in {
   home-manager = {
     extraSpecialArgs = {
       inherit inputs;
-      pkgs-unstable = import inputs.nixpkgs {
-        inherit (pkgs) system config overlays;
-      };
     };
 
     sharedModules = [
