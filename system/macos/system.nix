@@ -58,7 +58,26 @@
 
   system.activationScripts.setting.text = ''
     # change default apps
+
+    # video player
     duti -s com.colliderli.iina .mp4 all
     duti -s com.colliderli.iina .mkv all
+    duti -s com.colliderli.iina .mov all
+    duti -s com.colliderli.iina .avi all
+    duti -s com.colliderli.iina .flv all
+    duti -s com.colliderli.iina .wmv all
+    duti -s com.colliderli.iina .webm all
+    duti -s com.colliderli.iina .m4v all
+    duti -s com.colliderli.iina .mpeg all
+    duti -s com.colliderli.iina .mpg all
+    duti -s com.colliderli.iina .vob all
+    duti -s com.colliderli.iina .ts all
+    duti -s com.colliderli.iina .m2ts all
+    duti -s com.colliderli.iina .ogv all
+    duti -s com.colliderli.iina .rm all
+    duti -s com.colliderli.iina .rmvb all
+    duti -s com.colliderli.iina .3gp all
+    duti -s com.colliderli.iina .f4v all
+    duti -s com.colliderli.iina .asf all
   '';
 }
