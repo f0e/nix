@@ -16,6 +16,8 @@ $character"""
 # $docker_context\
 # $package\
 
+add_newline = false
+
 [directory]
 format = "[ $path ]($style)"
 style = "bg:#121211 fg:#8c816b"
