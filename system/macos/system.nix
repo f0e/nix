@@ -56,28 +56,14 @@
     };
   };
 
-  system.activationScripts.setting.text = ''
-    # change default apps
+  # todo: is this the best place to be doing this?
+  system.activationScripts.extraActivation.text = ''
+    # install rosetta
+    if ! pkgutil --pkgs | grep -q "com.apple.pkg.RosettaUpdateAuto"; then
+      softwareupdate --install-rosetta --agree-to-license
+    fi
 
-    # video player
-    duti -s com.colliderli.iina .mp4 all
-    duti -s com.colliderli.iina .mkv all
-    duti -s com.colliderli.iina .mov all
-    duti -s com.colliderli.iina .avi all
-    duti -s com.colliderli.iina .flv all
-    duti -s com.colliderli.iina .wmv all
-    duti -s com.colliderli.iina .webm all
-    duti -s com.colliderli.iina .m4v all
-    duti -s com.colliderli.iina .mpeg all
-    duti -s com.colliderli.iina .mpg all
-    duti -s com.colliderli.iina .vob all
-    duti -s com.colliderli.iina .ts all
-    duti -s com.colliderli.iina .m2ts all
-    duti -s com.colliderli.iina .ogv all
-    duti -s com.colliderli.iina .rm all
-    duti -s com.colliderli.iina .rmvb all
-    duti -s com.colliderli.iina .3gp all
-    duti -s com.colliderli.iina .f4v all
-    duti -s com.colliderli.iina .asf all
+    # disable 'slightly dim the display on battery'
+    sudo pmset -b lessbright 0
   '';
 }

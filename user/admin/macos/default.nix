@@ -6,6 +6,7 @@
 
     ./ghostty.nix
     ./packages.nix
+    ./system.nix
   ];
 
   home.homeDirectory = "/Users/admin";

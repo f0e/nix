@@ -6,6 +6,7 @@
     raycast
     iina
     keka
+    duti
 
     (discord.override {
       withOpenASAR = true;
