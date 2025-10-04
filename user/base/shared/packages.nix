@@ -11,14 +11,14 @@
     clean.extraArgs = "--keep-since 4d --keep 3";
   };
 
-  # programs.mise = {
-  #   enable = true;
-  #   enableFishIntegration = true;
+  programs.mise = {
+    enable = true;
+    enableFishIntegration = true;
 
-  #   globalConfig = {
-  #     settings = {
-  #       idiomatic_version_file_enable_tools = [];
-  #     };
-  #   };
-  # };
+    globalConfig = {
+      settings = {
+        idiomatic_version_file_enable_tools = [];
+      };
+    };
+  };
 }
