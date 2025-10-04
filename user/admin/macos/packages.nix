@@ -5,5 +5,11 @@
     shottr
     raycast
     iina
+    keka
+
+    (discord.override {
+      withOpenASAR = true;
+      withVencord = true;
+    })
   ];
 }
