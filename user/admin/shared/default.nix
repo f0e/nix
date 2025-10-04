@@ -4,6 +4,7 @@
     ./direnv.nix
     ./ghostty.nix
     ./git.nix
+    ./mpv.nix
     ./packages.nix
     ./shell.nix
     ./spicetify.nix

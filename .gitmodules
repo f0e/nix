@@ -1,0 +1,3 @@
+[submodule "dotfiles/mpv"]
+	path = dotfiles/mpv
+	url = https://github.com/f0e/mpv-config
