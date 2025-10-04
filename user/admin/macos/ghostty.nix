@@ -3,6 +3,9 @@
     package = pkgs.ghostty-bin;
 
     settings = {
+      window-width = 90;
+      window-height = 30;
+
       macos-titlebar-style = "native";
       macos-icon = "custom-style";
       # macos-icon-frame = "plastic";
