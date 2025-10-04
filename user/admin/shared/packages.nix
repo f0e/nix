@@ -26,7 +26,11 @@
 
     btop.enable = true;
 
-    neovim.enable = true;
+    neovim = {
+      enable = true;
+
+      defaultEditor = true;
+    };
 
     bat = {
       enable = true;
@@ -57,7 +61,7 @@
     vivid = {
       enable = true;
 
-      theme = "gruvbox-dark"; # vivid themes | fzf --preview 'vivid preview {}'
+      activeTheme = "gruvbox-dark"; # vivid themes | fzf --preview 'vivid preview {}'
 
       enableFishIntegration = true;
     };
