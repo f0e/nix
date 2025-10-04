@@ -46,34 +46,6 @@ in {
       enableFishIntegration = true;
     };
 
-    bat = {
-      enable = true;
-
-      config = {
-        style = "plain";
-      };
-    };
-
-    eza = {
-      enable = true;
-
-      enableFishIntegration = true;
-    };
-
-    fzf = {
-      enable = true;
-
-      enableFishIntegration = true;
-    };
-
-    jq = {
-      enable = true;
-    };
-
-    ripgrep = {
-      enable = true;
-    };
-
     starship = {
       enable = true;
 

@@ -6,20 +6,14 @@
   home.packages = with pkgs; [
     ffmpeg-full
     btop
-
-    fd
     sd
-    delta
     jless
     gron
     curlie
     hyperfine
     hexyl
     csvlens
-    vivid
     pastel
-
-    yt-dlp
 
     nerd-fonts.caskaydia-mono
     licensed-fonts.berkeley-mono
@@ -27,11 +21,51 @@
     licensed-fonts.palatino
   ];
 
-  programs.neovim.enable = true;
+  programs = {
+    yt-dlp.enable = true;
 
-  programs.thunderbird = {
-    enable = true;
+    btop.enable = true;
 
-    profiles."default".isDefault = true;
+    neovim.enable = true;
+
+    bat = {
+      enable = true;
+
+      config = {
+        style = "plain";
+      };
+    };
+
+    eza = {
+      enable = true;
+
+      enableFishIntegration = true;
+    };
+
+    fzf = {
+      enable = true;
+
+      enableFishIntegration = true;
+    };
+
+    jq.enable = true;
+
+    ripgrep.enable = true;
+
+    fd.enable = true;
+
+    vivid = {
+      enable = true;
+
+      theme = "gruvbox-dark"; # vivid themes | fzf --preview 'vivid preview {}'
+
+      enableFishIntegration = true;
+    };
+
+    thunderbird = {
+      enable = true;
+
+      profiles."default".isDefault = true;
+    };
   };
 }
