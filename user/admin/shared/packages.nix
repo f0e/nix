@@ -5,6 +5,8 @@
 }: {
   home.packages = with pkgs; [
     ffmpeg-full
+    eternal-terminal
+
     btop
     sd
     jless
