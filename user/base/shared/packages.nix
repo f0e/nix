@@ -1,23 +1,29 @@
-{inputs, ...}: {
-  programs.git.enable = true;
+{pkgs, ...}: {
+  home.packages = with pkgs; [
+    nerd-fonts.symbols-only
+  ];
 
-  programs.fastfetch.enable = true;
+  programs = {
+    git.enable = true;
 
-  programs.zsh.enable = true;
+    fastfetch.enable = true;
 
-  programs.nh = {
-    enable = true;
-    clean.enable = true;
-    clean.extraArgs = "--keep-since 4d --keep 3";
-  };
+    zsh.enable = true;
 
-  programs.mise = {
-    enable = true;
-    enableFishIntegration = true;
+    nh = {
+      enable = true;
+      clean.enable = true;
+      clean.extraArgs = "--keep-since 4d --keep 3";
+    };
 
-    globalConfig = {
-      settings = {
-        idiomatic_version_file_enable_tools = [];
+    mise = {
+      enable = true;
+      enableFishIntegration = true;
+
+      globalConfig = {
+        settings = {
+          idiomatic_version_file_enable_tools = [];
+        };
       };
     };
   };
