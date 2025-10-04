@@ -21,9 +21,10 @@
 
     yt-dlp
 
-    inputs.nix-licensed-fonts.packages.${pkgs.system}.berkeley-mono
-    inputs.nix-licensed-fonts.packages.${pkgs.system}.gill-sans
-    inputs.nix-licensed-fonts.packages.${pkgs.system}.palatino
+    nerd-fonts.caskaydia-mono
+    licensed-fonts.berkeley-mono
+    licensed-fonts.gill-sans
+    licensed-fonts.palatino
   ];
 
   programs.neovim.enable = true;
