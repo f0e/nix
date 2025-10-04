@@ -31,6 +31,4 @@
         }
       '';
   };
-
-  programs.git.ignores = [".envrc"];
 }
