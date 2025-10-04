@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   home.packages = with pkgs; [
     ffmpeg-full
     btop
@@ -16,6 +20,10 @@
     pastel
 
     yt-dlp
+
+    inputs.nix-licensed-fonts.packages.${pkgs.system}.berkeley-mono
+    inputs.nix-licensed-fonts.packages.${pkgs.system}.gill-sans
+    inputs.nix-licensed-fonts.packages.${pkgs.system}.palatino
   ];
 
   programs.neovim.enable = true;

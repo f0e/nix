@@ -12,6 +12,7 @@
 
       window-padding-color = "background";
 
+      font-family = "BerkeleyMono Nerd Font";
       font-size = 11;
       font-thicken = true;
       font-thicken-strength = 64;

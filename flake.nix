@@ -33,6 +33,12 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-licensed-fonts = {
+      type = "git";
+      url = "ssh://git@github.com/f0e/nix-licensed-fonts.git";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {

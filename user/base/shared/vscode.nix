@@ -23,6 +23,8 @@
       userSettings = {
         editor.formatOnSave = true;
 
+        editor.fontFamily = "BerkeleyMono Nerd Font, monospace";
+
         workbench.colorTheme = "Darker Modern";
 
         nix.serverPath = "nixd";
