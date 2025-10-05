@@ -47,24 +47,19 @@
     nix-licensed-fonts,
     ...
   } @ inputs: let
-    commonModules = [
-      {
-        nixpkgs.overlays = [
-          (final: prev: {
-            licensed-fonts = nix-licensed-fonts.packages.${final.system};
-          })
-        ];
-      }
+    overlays = [
+      (final: prev: {
+        licensed-fonts = nix-licensed-fonts.overlays.default final prev;
+      })
     ];
   in {
     nixosConfigurations = {
       desktop = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
-        modules =
-          commonModules
-          ++ [
-            ./hosts/desktop/configuration.nix
-          ];
+        modules = [
+          {nixpkgs.overlays = overlays;}
+          ./hosts/desktop/configuration.nix
+        ];
       };
     };
 
@@ -72,11 +67,10 @@
       macbook-13 = nix-darwin.lib.darwinSystem {
         system = "aarch64-darwin";
         specialArgs = {inherit inputs;};
-        modules =
-          commonModules
-          ++ [
-            ./hosts/macbook-13/configuration.nix
-          ];
+        modules = [
+          {nixpkgs.overlays = overlays;}
+          ./hosts/macbook-13/configuration.nix
+        ];
       };
     };
   };
