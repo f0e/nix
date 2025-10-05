@@ -1,8 +1,10 @@
 {
-  inputs,
+  config,
   pkgs,
   ...
-}: {
+}: let
+  dotfiles = "${config.home.homeDirectory}/nix/dotfiles"; # todo: store in centralised config at root level with other shit
+in {
   home.packages = with pkgs; [
     ffmpeg-full
     eternal-terminal
@@ -68,5 +70,11 @@
 
       profiles."default".isDefault = true;
     };
+
+    mpv.enable = true;
+  };
+
+  xdg.configFile = {
+    "mpv".source = config.lib.file.mkOutOfStoreSymlink "${dotfiles}/mpv";
   };
 }
