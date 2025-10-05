@@ -6,6 +6,7 @@
 
     ./ghostty.nix
     ./packages.nix
+    ./services.nix
     ./system.nix
   ];
 
