@@ -27,6 +27,8 @@
 
         workbench.colorTheme = "Darker Modern";
 
+        chat.disableAIFeatures = true;
+
         nix.serverPath = "nixd";
         nix.enableLanguageServer = true;
         nix.hiddenLanguageServerErrors = [
@@ -41,7 +43,7 @@
           };
         };
 
-        chat.disableAIFeatures = true;
+        C_Cpp.intelliSenseEngine = "disabled";
 
         # disable annoying stuff
         biome.suggestInstallingGlobally = false;
