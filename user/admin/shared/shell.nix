@@ -34,24 +34,16 @@ in {
       enable = true;
 
       options = ["--cmd cd"];
-
-      enableFishIntegration = true;
     };
 
     atuin = {
       enable = true;
 
       flags = ["--disable-up-arrow"];
-
-      enableFishIntegration = true;
     };
 
     starship = {
       enable = true;
-
-      enableFishIntegration = true;
-      enableZshIntegration = true;
-      enableBashIntegration = true;
     };
   };
 

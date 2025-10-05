@@ -45,14 +45,10 @@
 
     eza = {
       enable = true;
-
-      enableFishIntegration = true;
     };
 
     fzf = {
       enable = true;
-
-      enableFishIntegration = true;
     };
 
     jq.enable = true;
@@ -65,8 +61,6 @@
       enable = true;
 
       activeTheme = "gruvbox-dark"; # vivid themes | fzf --preview 'vivid preview {}'
-
-      enableFishIntegration = true;
     };
 
     thunderbird = {
