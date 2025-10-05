@@ -6,6 +6,7 @@
   home.packages = with pkgs; [
     ffmpeg-full
     eternal-terminal
+    video-compare
 
     btop
     sd
