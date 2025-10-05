@@ -6,7 +6,7 @@
 
     ./hyprpaper.nix
     ./packages.nix
-    ./systemd.nix
+    ./services.nix
   ];
 
   home.homeDirectory = "/home/admin";

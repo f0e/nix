@@ -50,5 +50,6 @@
 
   imports = [
     ../../../user/admin/linux
+    inputs.sops-nix.homeManagerModule
   ];
 }

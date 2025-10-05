@@ -7,6 +7,7 @@
     ./mpv.nix
     ./packages.nix
     ./shell.nix
+    ./sops.nix
     ./spicetify.nix
   ];
 
