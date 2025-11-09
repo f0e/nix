@@ -1,0 +1,8 @@
+[tasks.switch]
+run = "nh darwin switch .#darwinConfigurations.macbook-13"
+
+[tasks.update]
+run = "nix flake update"
+
+[tasks.edit-secrets]
+run = "SOPS_AGE_KEY_FILE=~/.config/sops/age/keys.txt EDITOR=\"code --wait\" sops secrets/secrets.yaml"
