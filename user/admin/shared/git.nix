@@ -4,9 +4,12 @@
   config,
   ...
 }: {
-  programs.git = {
-    delta.enable = true;
+  programs.delta = {
+    enable = true;
+    enableGitIntegration = true;
+  };
 
+  programs.git = {
     lfs.enable = true;
 
     # difftastic {
@@ -15,7 +18,7 @@
     #   background = "dark";
     # };
 
-    extraConfig = {
+    settings = {
       core.editor = "nvim";
 
       commit.verbose = true;

@@ -1,5 +1,5 @@
 {...}: {
   programs.git = {
-    extraConfig.init.defaultBranch = "main";
+    settings.init.defaultBranch = "main";
   };
 }
