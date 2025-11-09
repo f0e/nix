@@ -20,6 +20,11 @@
       enable = true;
 
       globalConfig = {
+        tools = {
+          node = "lts";
+          "npm:http-server" = "latest";
+        };
+
         settings = {
           idiomatic_version_file_enable_tools = [];
         };
