@@ -7,6 +7,8 @@
     # todo: nesting?? does nix-sops just not support it??? i keep getting errors bro
     secrets.spotify_client_id = {};
     secrets.spotify_client_secret = {};
+    secrets.lastfm_username = {};
+    secrets.lastfm_api_key = {};
     secrets.plex_server_url = {};
     secrets.plex_token = {};
     secrets.plex_libraries = {}; # note: needs to be a string not an array. another thing nix-sops doesnt support?
@@ -29,8 +31,8 @@
             redirect_uri: http://localhost:8888/callback
           lastfm:
             enabled: false
-            username: null
-            api_key: null
+            username: ${config.sops.placeholder.lastfm_username}
+            api_key: ${config.sops.placeholder.lastfm_api_key}
           plex:
             enabled: true
             server_url: ${config.sops.placeholder.plex_server_url}
