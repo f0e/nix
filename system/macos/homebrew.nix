@@ -8,11 +8,15 @@
       "1password"
       "brave-browser"
 
+      # not in nixpkgs
+      "plex"
+      "plexamp"
       "battery"
     ];
 
     masApps = {
       tailscale = 1475387142;
+      windows-app = 1295203466;
     };
   };
 }
