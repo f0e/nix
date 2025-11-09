@@ -51,5 +51,6 @@
   imports = [
     ../../../user/admin/linux
     inputs.sops-nix.homeManagerModule
+    inputs.zen-browser.homeModules.beta
   ];
 }

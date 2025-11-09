@@ -1,4 +1,5 @@
 {
+  inputs,
   config,
   pkgs,
   ...
@@ -65,10 +66,37 @@ in {
       activeTheme = "gruvbox-dark"; # vivid themes | fzf --preview 'vivid preview {}'
     };
 
-    thunderbird = {
+    zen-browser = {
       enable = true;
 
-      profiles."default".isDefault = true;
+      profiles.default = {
+        extensions.packages = with inputs.firefox-addons.packages.${pkgs.system}; [
+          # onepassword-password-manager
+          # refined-github
+          ublock-origin
+          sponsorblock
+          violentmonkey
+        ];
+      };
+
+      policies = {
+        AutofillAddressEnabled = false;
+        AutofillCreditCardEnabled = false;
+        DisableAppUpdate = true;
+        DisableFeedbackCommands = true;
+        DisableFirefoxStudies = true;
+        DisablePocket = true;
+        DisableTelemetry = true;
+        DontCheckDefaultBrowser = true;
+        NoDefaultBookmarks = true;
+        OfferToSaveLogins = false;
+        EnableTrackingProtection = {
+          Value = true;
+          Locked = true;
+          Cryptomining = true;
+          Fingerprinting = true;
+        };
+      };
     };
 
     mpv.enable = true;

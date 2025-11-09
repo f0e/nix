@@ -20,5 +20,6 @@
     ../../../user/admin/macos
     inputs.spicetify-nix.homeManagerModules.spicetify
     inputs.sops-nix.homeManagerModule
+    inputs.zen-browser.homeModules.beta
   ];
 }

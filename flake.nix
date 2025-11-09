@@ -44,6 +44,18 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      # IMPORTANT: we're using "libgbm" and is only available in unstable so ensure
+      # to have it up-to-date or simply don't specify the nixpkgs input
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    firefox-addons = {
+      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -58,14 +70,14 @@
         specialArgs = {inherit inputs;};
         modules = [
           ./hosts/desktop/configuration.nix
-      {
-        nixpkgs.overlays = [
-          (final: prev: {
-            licensed-fonts = nix-licensed-fonts.overlays.default final prev;
-          })
+          {
+            nixpkgs.overlays = [
+              (final: prev: {
+                licensed-fonts = nix-licensed-fonts.overlays.default final prev;
+              })
+            ];
+          }
         ];
-      }
-    ];
       };
     };
 
@@ -74,7 +86,7 @@
         system = "aarch64-darwin";
         specialArgs = {inherit inputs;};
         modules = [
-            ./hosts/macbook-13/configuration.nix
+          ./hosts/macbook-13/configuration.nix
           {
             nixpkgs.overlays = [
               (final: prev: {
