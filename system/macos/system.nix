@@ -18,6 +18,9 @@
         NSAutomaticPeriodSubstitutionEnabled = false;
         NSAutomaticQuoteSubstitutionEnabled = false;
         NSAutomaticSpellingCorrectionEnabled = false;
+
+        # sound when changing volume
+        "com.apple.sound.beep.feedback" = 1;
       };
       dock = {
         autohide = true;
