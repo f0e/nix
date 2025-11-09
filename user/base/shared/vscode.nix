@@ -27,6 +27,8 @@
 
         workbench.colorTheme = "Darker Modern";
 
+        terminal.integrated.scrollback = 10000;
+
         chat.disableAIFeatures = true;
 
         nix.serverPath = "nixd";
