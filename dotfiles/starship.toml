@@ -49,9 +49,9 @@ diverged = "↑${ahead_count}↓${behind_count}"
 conflicted = "!"
 untracked = "*"
 modified = "*"
-staged = "+"
+staged = "⁺"
 renamed = "»"
-deleted = "x"
+deleted = "ˣ"
 
 [git_state]
 format = '([$state( $progress_current/$progress_total)]($style))'
