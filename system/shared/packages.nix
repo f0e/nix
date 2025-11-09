@@ -7,5 +7,6 @@
     alejandra
     nixd
     sops
+    wget
   ];
 }
