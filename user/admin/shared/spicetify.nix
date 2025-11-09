@@ -14,13 +14,13 @@ in {
       shuffle # shuffle+ (special characters are sanitized out of extension names)
       # skipOrPlayLikedSongs
       fullAlbumDate
-      skipStats
-      songStats
+      # skipStats
+      # songStats
       showQueueDuration
-      history
-      lastfm
-      copyLyrics
-      sectionMarker
+      # history
+      # lastfm
+      # copyLyrics
+      # sectionMarker
       starRatings
       allOfArtist
       oldCoverClick
