@@ -36,6 +36,7 @@
         ShowPathbar = true;
         FXEnableExtensionChangeWarning = false;
         QuitMenuItem = true;
+    		_FXSortFoldersFirst = true;
       };
       controlcenter = {
         BatteryShowPercentage = true;
