@@ -47,6 +47,9 @@
 
         C_Cpp.intelliSenseEngine = "disabled";
 
+        # nix handles updates
+        update.mode = "none";
+
         # disable annoying stuff
         biome.suggestInstallingGlobally = false;
         cmake.showConfigureWithDebuggerNotification = false;
