@@ -56,6 +56,9 @@ in {
 
     fzf = {
       enable = true;
+
+      # atuin owns ctrl-r
+      historyWidget.command = "";
     };
 
     jq.enable = true;
