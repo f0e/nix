@@ -6,6 +6,10 @@
       url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     };
 
+    nixpkgs-master = {
+      url = "github:NixOS/nixpkgs/master";
+    };
+
     nix-darwin = {
       url = "github:nix-darwin/nix-darwin/master";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -45,6 +49,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
       # IMPORTANT: we're using "libgbm" and is only available in unstable so ensure
@@ -54,6 +63,11 @@
 
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nix-claude-code = {
+      url = "github:ryoppippi/nix-claude-code";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -71,6 +85,8 @@
           ./hosts/desktop/configuration.nix
           {
             nixpkgs.overlays = [
+              inputs.nur.overlays.default
+
               (final: prev: {
                 licensed-fonts = nix-licensed-fonts.overlays.default final prev;
               })
@@ -87,8 +103,13 @@
           ./hosts/macbook-13/configuration.nix
           {
             nixpkgs.overlays = [
+              inputs.nur.overlays.default
+
               (final: prev: {
                 licensed-fonts = nix-licensed-fonts.overlays.default final prev;
+
+                curl-impersonate =
+                  inputs.nixpkgs-master.legacyPackages.${prev.system}.curl-impersonate;
               })
             ];
           }
