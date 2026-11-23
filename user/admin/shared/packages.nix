@@ -10,6 +10,7 @@ in {
     ffmpeg-full
     eternal-terminal
     video-compare
+    yaak
 
     btop
     sd
