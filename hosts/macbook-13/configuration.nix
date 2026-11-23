@@ -53,7 +53,7 @@ in {
     };
   };
 
-  # TODO: remove once https://github.com/nix-community/home-manager/pull/7915 is merged
+  # --- TODO: remove once https://github.com/nix-community/home-manager/pull/7915 is merged
   home-manager.sharedModules = [
     {
       targets.darwin.linkApps.enable = lib.mkDefault false;
@@ -63,12 +63,13 @@ in {
   system.build.applications = lib.mkForce (
     pkgs.buildEnv {
       name = "system-applications";
-      pathsToLink = "/Applications";
+      pathsToLink = ["/Applications"];
       paths =
         config.environment.systemPackages
         ++ (lib.concatMap (x: x.home.packages) (lib.attrsets.attrValues config.home-manager.users));
     }
   );
+  # ---
 
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
