@@ -86,6 +86,37 @@ in {
         ];
       };
 
+      # settings = {
+      #   "uBlock0@raymondhill.net" = {
+      #     settings = {
+      #       # Get your settings here
+      #       # ~/.zen/YOUR_PROFILE_NAME/browser-extension-data/uBlock0@raymondhill.net/storage.js
+      #       advancedUserEnabled = true;
+      #       selectedFilterLists = [
+      #         "user-filters"
+      #         "ublock-filters"
+      #         "ublock-badware"
+      #         "ublock-privacy"
+      #         "ublock-unbreak"
+      #         "ublock-quick-fixes"
+      #         "easylist"
+      #         "easyprivacy"
+      #         "urlhaus-1"
+      #         "plowe-0"
+      #         "adguard-spyware-url"
+      #         "fanboy-cookiemonster"
+      #         "ublock-cookies-easylist"
+      #         "easylist-annoyances"
+      #         "easylist-chat"
+      #         "easylist-newsletters"
+      #         "easylist-notifications"
+      #         "ublock-annoyances"
+      #         "IDN-0"
+      #       ];
+      #     };
+      #   };
+      # };
+
       policies = {
         AutofillAddressEnabled = false;
         AutofillCreditCardEnabled = false;
@@ -105,6 +136,11 @@ in {
         };
       };
     };
+    # thunderbird = {
+    #   enable = true;
+
+    #   profiles."default".isDefault = true;
+    # };
 
     mpv.enable = true;
   };
