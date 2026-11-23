@@ -38,7 +38,12 @@ in {
     # so we repeat them here just to get them in the brewfile.
     # See also: https://github.com/zhaofengli/nix-homebrew/issues/5
     taps = lib.attrNames taps;
-    onActivation.cleanup = "zap";
+
+    onActivation = {
+      autoUpdate = true;
+      cleanup = "zap";
+      upgrade = true;
+    };
   };
 
   home-manager = {
