@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   launchd.agents.discord-music-rpc = {
-    enable = true;
+    enable = false;
     config = {
       ProgramArguments = [
         "${pkgs.direnv}/bin/direnv"
