@@ -46,6 +46,8 @@ in {
       inherit inputs;
     };
 
+    backupFileExtension = "backup";
+
     users = {
       "admin" = import ./users/admin.nix;
     };
