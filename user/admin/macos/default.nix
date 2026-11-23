@@ -4,6 +4,7 @@
 
     ../shared
 
+    ./discord.nix
     ./ghostty.nix
     ./packages.nix
     ./services.nix

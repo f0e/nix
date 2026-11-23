@@ -6,10 +6,5 @@
     iina
     keka
     duti
-
-    (discord.override {
-      withOpenASAR = true;
-      withVencord = true;
-    })
   ];
 }
