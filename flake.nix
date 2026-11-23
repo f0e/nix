@@ -66,7 +66,6 @@
   } @ inputs: {
     nixosConfigurations = {
       desktop = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
         specialArgs = {inherit inputs;};
         modules = [
           ./hosts/desktop/configuration.nix
@@ -83,7 +82,6 @@
 
     darwinConfigurations = {
       macbook-13 = nix-darwin.lib.darwinSystem {
-        system = "aarch64-darwin";
         specialArgs = {inherit inputs;};
         modules = [
           ./hosts/macbook-13/configuration.nix
