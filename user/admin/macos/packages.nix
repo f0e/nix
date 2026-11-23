@@ -6,5 +6,15 @@
     iina
     keka
     duti
+    imagemagick
+    utm
+    orbstack
+    ollama
+    claude-code
+    sqlitebrowser
+
+    # ipa/sideloading stuff
+    ldid
+    zsign
   ];
 }
