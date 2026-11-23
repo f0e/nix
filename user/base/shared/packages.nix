@@ -23,6 +23,7 @@
         tools = {
           node = "lts";
           "npm:http-server" = "latest";
+          "watchexec" = "latest";
         };
 
         settings = {
