@@ -12,6 +12,16 @@
       "plex"
       "plexamp"
       "battery"
+      "macfuse"
+      "rocket"
+      "find-any-file"
+      "helium-browser"
+      # "dockdoor"
+      "google-chrome"
+
+      # annoying in nix
+      "steam"
+      "alt-tab"
     ];
 
     masApps = {
